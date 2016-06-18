@@ -25,7 +25,7 @@ function convertDigitIn(enDigit){ // PERSIAN, ARABIC, URDO
 const styles = {
     arabic: {
         fontFamily: 'Droid Arabic Naskh',
-        fontSize: 22,
+        fontSize: 30,
         margin: 20,
         textAlign: 'right',
         lineHeight: 2

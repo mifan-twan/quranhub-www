@@ -6,8 +6,8 @@ const createQuranHandler = (graphql) => {
             const query = (`
                 {
                     sura(id: "${sura_id}") {
-                        _id,
                         title,
+                        _id,
                         ayah(offset: ${offset}, limit: ${limit}) {
                             ayah_text,
                             verse,
