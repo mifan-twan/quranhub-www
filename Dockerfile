@@ -1,18 +1,13 @@
-FROM node:6.1.0
+FROM mhart/alpine-node:6.2
 
-# Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /src
+ADD . .
+
+RUN npm install --global webpack; npm install; npm run build;
 
 ENV PORT 80
-RUN npm install -g webpack
-
-# Install app dependencies
-COPY package.json /usr/src/app/
-RUN npm install; npm run build
-
-# Bundle app source
-COPY . /usr/src/app
+ENV NODE_ENV production
 
 EXPOSE 80
 CMD [ "npm", "start" ]
+

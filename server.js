@@ -2,13 +2,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const compression = require('compression');
 const graphqlHTTP = require('express-graphql');
 const schema = require('./schema');
 const context = require('./context');
 
 const app = express();
 
-app.use(cors())
+app.use(cors());
+app.use(compression());
 
 app.use('/build', express.static(__dirname + "/build"));
 

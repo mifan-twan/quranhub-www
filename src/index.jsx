@@ -7,7 +7,7 @@ const {h, Component, render} = require('preact');
 const {createGraphqlClient, createHandlers, createActionQueue} = require('./utils');
 const appReducer = require('./appReducer');
 
-const isProd = process.env.DONE_ENV === "production";
+const isProd = process.env.NODE_ENV === "production";
 
 let root;
 const startUserInterfaceLayer = (target) => {
