@@ -23,17 +23,6 @@ function convertDigitIn(enDigit){ // PERSIAN, ARABIC, URDO
 }
 
 const styles = {
-    arabic: {
-        fontFamily: 'Droid Arabic Naskh',
-        fontSize: 30,
-        margin: 20,
-        textAlign: 'right',
-        lineHeight: 2
-    },
-    latin: {
-        fontSize: 18,
-        lineHeight: 1.5
-    },
     title: {
         textAlign: 'center',
         fontSize: 20,
@@ -102,7 +91,7 @@ class Surah extends Component {
                 const isArabic = aya._language === 1;
                 return (
                     <div class="uk-width-1-1">
-                        <p style={isArabic? styles.arabic : styles.latin}>{isArabic? convertDigitIn(aya.verse.toString()) : aya.verse}) {aya.ayah_text}</p>
+                        <p class={isArabic? "arab": "latin"}>{isArabic? convertDigitIn(aya.verse.toString()) : aya.verse}) {aya.ayah_text.replace(/&quot;/g,'"')}</p>
                     </div>
                 )
             })

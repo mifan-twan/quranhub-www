@@ -4,6 +4,7 @@ const {Link} = require('preact-router');
 const PropTypes = require('proptypes');
 const Layout = require('../common/Layout');
 const {connect} = require('preact-redux');
+const colorHash = new (require('color-hash'))({ saturation: 0.05 });
 
 class Home extends Component {
     constructor(props, context) {
@@ -15,8 +16,8 @@ class Home extends Component {
         const surah = surahIds.map(suraId => surahMaps[suraId])
             .map(sura => {
                 return (
-                    <div class="uk-width-1-2">
-                        <Link href={`/sura/${sura._id}`}>{sura.title}</Link>
+                    <div class="uk-width-small-1-2 uk-width-medium-1-4" style={{ textAlign: 'center', marginBottom: 10 }}>
+                        <Link style={{ color: colorHash.hex(sura.title), fontSize: 20 }} href={`/sura/${sura._id}`}>{sura._id}) {sura.title}</Link>
                     </div>
                 )
             })

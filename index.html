@@ -2,20 +2,56 @@
 <html>
 <head>
     <title>Quran Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/css/uikit.almost-flat.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <style type="text/css">
         body {
-            font-family: 'museo-sans';
-            font-weight: 300;
+            font-family: 'Raleway', 'Avenir', 'PT Serif', serif;
+            font-weight: 400;
             font-size: 16px;
+        }
+
+        .latin {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .arab {
+            font-family: 'Droid Arabic Naskh';
+            font-size: 30px;
+            margin: 20px;
+            text-align: right;
+            line-height: 2;
+        }
+
+        @-ms-viewport{
+            width: device-width;
+        }
+
+        @media only screen 
+            and (min-device-width: 320px) 
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2)
+            and (orientation: portrait) {
+            .latin {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .arab {
+                font-family: 'Droid Arabic Naskh';
+                font-size: 16px;
+                margin: 15px;
+                text-align: right;
+                line-height: 2;
+            }
         }
     </style>
 </head>
 <body>
 <script type="text/javascript" src="/build/vendor.bundle.js"></script>
 <script type="text/javascript" src="/build/bundle.js"></script>
-<script src="https://use.typekit.net/oqt8oqy.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </body>
 </html>
